@@ -1,0 +1,19 @@
+{
+    "name": "msof/portfolio-plugin",
+    "type": "october-plugin",
+    "description": "AJAX-powered Masonry portfolio with category filters and a quick view popup.",
+    "homepage": "https://octobercms.com/plugin/rainlab-blog",
+    "keywords": ["october", "octobercms", "portfolio"],
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Marios Sofokleous",
+            "email": "marios.sofokleous@yandex.com",
+            "homepage": "https://www.msof.me/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
