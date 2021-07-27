@@ -1,0 +1,10 @@
+name: Projects
+form: $/msof/portfolio/models/project/fields.yaml
+modelClass: Msof\Portfolio\Models\Project
+defaultRedirect: msof/portfolio/projects
+create:
+    redirect: 'msof/portfolio/projects/update/:id'
+    redirectClose: msof/portfolio/projects
+update:
+    redirect: msof/portfolio/projects
+    redirectClose: msof/portfolio/projects

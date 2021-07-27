@@ -1,0 +1,12 @@
+list: $/msof/portfolio/models/category/columns.yaml
+modelClass: Msof\Portfolio\Models\Category
+title: Categories
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'msof/portfolio/categories/update/:id'

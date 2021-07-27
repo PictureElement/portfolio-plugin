@@ -1,0 +1,37 @@
+plugin:
+    name: 'msof.portfolio::lang.plugin.name'
+    description: 'msof.portfolio::lang.plugin.description'
+    author: 'Marios Sofokleous'
+    icon: oc-icon-briefcase
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Portfolio
+        url: msof/portfolio/projects
+        icon: icon-briefcase
+        permissions:
+            - manage_portfolio
+        order: '200'
+        sideMenu:
+            side-menu-item:
+                label: 'New project'
+                url: msof/portfolio/projects/create
+                icon: icon-plus
+                permissions:
+                    - manage_portfolio
+            side-menu-item1:
+                label: Projects
+                url: msof/portfolio/projects
+                icon: icon-files-o
+                permissions:
+                    - manage_portfolio
+            side-menu-item2:
+                label: Categories
+                url: msof/portfolio/categories
+                icon: icon-list-ul
+                permissions:
+                    - manage_portfolio
+permissions:
+    manage_portfolio:
+        tab: Portfolio
+        label: 'Manage portfolio'

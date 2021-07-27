@@ -1,0 +1,54 @@
+fields:
+    published:
+        label: Published
+        span: auto
+        type: checkbox
+    title:
+        label: Title
+        span: left
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: right
+        required: 1
+        preset:
+            field: title
+            type: slug
+        type: text
+    published_at:
+        label: 'Published on'
+        mode: datetime
+        span: auto
+        required: 1
+        trigger:
+            action: enable
+            field: published
+            condition: checked
+        type: datepicker
+    category:
+        label: Category
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        required: 1
+        type: relation
+    preview_image:
+        label: 'Preview image (1152xH, JPG | JPEG | PNG | SVG)'
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        required: 1
+        type: fileupload
+        comment: 'Used in "Projects" and "Project" pages'
+    text:
+        label: Description (Quick view popup)
+        size: huge
+        span: full
+        required: 1
+        type: richeditor

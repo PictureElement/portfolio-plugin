@@ -1,0 +1,7 @@
+<div class="portfolio-list__sizer"></div>
+
+<div class="portfolio-list__gutter-sizer"></div>
+
+{% for item in projects %}
+    {% partial __SELF__ ~ '::item' item=item %}
+{% endfor %}

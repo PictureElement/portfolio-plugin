@@ -1,0 +1,10 @@
+name: Categories
+form: $/msof/portfolio/models/category/fields.yaml
+modelClass: Msof\Portfolio\Models\Category
+defaultRedirect: msof/portfolio/categories
+create:
+    redirect: 'msof/portfolio/categories/update/:id'
+    redirectClose: msof/portfolio/categories
+update:
+    redirect: msof/portfolio/categories
+    redirectClose: msof/portfolio/categories

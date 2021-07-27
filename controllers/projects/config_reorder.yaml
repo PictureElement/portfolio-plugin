@@ -1,0 +1,5 @@
+title: Projects
+nameFrom: title
+modelClass: Msof\Portfolio\Models\Project
+toolbar:
+    buttons: reorder_toolbar

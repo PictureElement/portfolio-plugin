@@ -1,0 +1,20 @@
+columns:
+    title:
+        label: Title
+        type: text
+        searchable: true
+    published_at:
+        label: 'Published at'
+        type: date
+    published:
+        label: Published
+        type: number
+    category:
+        label: Category
+        type: text
+        searchable: true
+        select: name
+        relation: category
+    sort_order:
+        label: Order
+        type: number

@@ -1,0 +1,36 @@
+<div class="portfolio-list">
+    {% if projects %}
+        <div id="portfolioListFilters" class="portfolio-list__filters">
+            <button id="portfolioListCategory-0" class="portfolio-list__category portfolio-list__category_selected" type="button">ALL</button>
+            {% for item in categories %}
+                <button id="portfolioListCategory-{{ item.id }}" class="portfolio-list__category" type="button">{{ item.name|upper }}</button>
+            {% endfor %}
+        </div>
+        <div class="portfolio-list__stage-outer">
+            <div class="portfolio-list__stage" id="portfolioListStage">
+                {% partial __SELF__ ~ '::stage' projects=projects %}
+            </div>
+        </div>
+    {% else %}
+        <p>There are no projects</p>
+    {% endif %}
+    
+    <div id="portfolioListModal" class="portfolio-list__modal">
+        <div data-simplebar data-simplebar-auto-hide="false">
+            <h5 id="portfolioListModalTitle"></h5>
+            <div id="portfolioListModalText" style="overflow:hidden;"></div>
+        </div>
+    </div>
+    
+    <div class="portfolio-list__stage-loader" id="portfolioListStageLoader">
+        <div role="status">
+            <span class="screen-reader-only">Loading...</span>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-list__modal-spinner" id="portfolioListModalSpinner">
+    <div role="status">
+        <span class="screen-reader-only">Loading...</span>
+    </div>
+</div>
