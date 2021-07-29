@@ -24,7 +24,8 @@ You can edit this content by selecting **Projects** from the administration back
 
         Category::create([
             'name' => 'Uncategorized',
-            'slug' => 'uncategorized'
+            'slug' => 'uncategorized',
+            'created_at' => Carbon::now()
         ]);
     }
 }

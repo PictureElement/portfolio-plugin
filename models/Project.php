@@ -23,9 +23,7 @@ class Project extends Model
     public $rules = [
         'title'   => 'required',
         'slug'    => ['required', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique:msof_portfolio_projects'],
-        'category' => 'required',
-        'text' => 'required',
-        'preview_image' => 'required'
+        'text' => 'required'
     ];
     
     public function afterValidate() {
