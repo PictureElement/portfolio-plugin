@@ -23,12 +23,16 @@ class Project extends Model
     public $rules = [
         'title'   => 'required',
         'slug'    => ['required', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique:msof_portfolio_projects'],
+        'category' => 'required',
+        'preview_image' => 'required',
         'text' => 'required'
     ];
     
     public function afterValidate() {
         if ($this->published && !$this->published_at) {
-            throw ValidationException::withMessages(['published_at' => '-Published on- field is empty!']);
+            throw new ValidationException([
+               'published_at' => 'Please specify the published date'
+            ]);
         }
     }
     
