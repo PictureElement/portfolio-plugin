@@ -39,10 +39,6 @@ class Project extends Model
         'category' => 'Msof\Portfolio\Models\Category'
     ];
      
-    public $attachMany = [
-        'gallery' => [\System\Models\File::class, 'order' => 'sort_order']
-    ];
-    
     public $attachOne = [
         'preview_image' => [\System\Models\File::class]
     ];
