@@ -1,9 +1,9 @@
-<?php namespace msof\Portfolio\Updates;
+<?php namespace Msof\Portfolio\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableCreateMsofPortfolioCategoriesProjects extends Migration
+class CreateMsofPortfolioCategoriesProjects extends Migration
 {
     public function up()
     {
