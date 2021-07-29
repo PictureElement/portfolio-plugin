@@ -1,6 +1,6 @@
 <article class="portfolio-list__item animated zoomIn">
     <a id="portfolioListLink-{{ item.id }}" class="portfolio-list__link" href="javascript:;" role="button">
-        <img class="portfolio-list__image" src="{{ item.preview_image.path }}" alt="...">
+        <img class="portfolio-list__image" src="{{ item.preview_image.path }}" alt="{{ item.preview_image.description }}">
         <h5 class="portfolio-list__title">{{ item.title }}</h5>
     </a>
 </article>
