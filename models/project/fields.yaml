@@ -20,7 +20,6 @@ fields:
         label: 'Published on'
         mode: datetime
         span: auto
-        required: 1
         trigger:
             action: enable
             field: published
@@ -31,7 +30,6 @@ fields:
         nameFrom: name
         descriptionFrom: description
         span: auto
-        required: 1
         type: relation
     preview_image:
         label: 'Preview image (1152xH, JPG | JPEG | PNG | SVG)'
