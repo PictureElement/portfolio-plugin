@@ -10,22 +10,19 @@ class SeedAllTables extends Seeder
 {
     public function run()
     {
-        $file = new File;
-        $file->data = 'https://placehold.co/600x400.png';
-
         $category = Category::create([
-            'name' => 'Yncategorized',
-            'slug' => 'Yncategorized'
+            'name' => 'Uncategorized',
+            'slug' => 'uncategorized'
         ]);
 
-        Project::create([
+        $project = Project::create([
             'published' => true,
-            'title' => 'Yirst project',
-            'slug' => 'yirst-project',
+            'title' => 'First project',
+            'slug' => 'first-project',
             'published_at' => Carbon::now(),
+            'preview_image' => plugins_path('msof/portfolio/assets/placeholder.png'),
             'category' => $category,
-            'preview_image' => $file,
-            'text' => 'YThis is your first ever project! It might be a good idea to update this project with some more relevant content. You can edit this content by selecting Portfolio from the administration back-end menu. Enjoy the good times!'
+            'text' => 'This is your first ever project! It might be a good idea to update this project with some more relevant content. You can edit this content by selecting Portfolio from the administration back-end menu. Enjoy the good times!'
         ]);
     }
 }

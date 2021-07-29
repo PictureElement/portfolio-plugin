@@ -35,18 +35,18 @@ class Project extends Model
             ]);
         }
     }
-    
+
     /**
      * Relations
      */
     public $belongsTo = [
         'category' => 'Msof\Portfolio\Models\Category'
     ];
-     
-    public $attachOne = [
-        'preview_image' => [\System\Models\File::class]
-    ];
     
+    public $attachOne = [
+        'preview_image' => [\System\Models\File::class, 'delete' => 'true']
+    ];
+
     /**
      * Handler for the Pages and Sitemap plugins
      * Returns information about a menu item.
