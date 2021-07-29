@@ -11,10 +11,10 @@ class CreateMsofPortfolioProjects extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
-            $table->string('title')->nullable()->unsigned(false)->default(null)->change();
+            $table->string('title')->nullable();
             $table->string('slug');
-            $table->text('text')->nullable();
-            $table->boolean('published')->default(0)->change();
+            $table->longText('text')->nullable();
+            $table->boolean('published')->default(0);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('published_at')->nullable();
