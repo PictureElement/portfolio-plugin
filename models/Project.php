@@ -93,7 +93,7 @@ class Project extends Model
         // Default options
         extract(array_merge([
             'page' => 1,
-            'perPage' => 21,
+            'perPage' => 100,
             'sort' => 'sort_order',
             'category' => null,
             'published' => true
