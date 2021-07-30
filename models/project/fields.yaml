@@ -33,7 +33,7 @@ fields:
         required: 1
         type: relation
     preview_image:
-        label: 'Preview image (1152xH, JPG | JPEG | PNG | SVG)'
+        label: 'Preview image (JPG | JPEG | PNG | SVG)'
         mode: image
         imageWidth: '200'
         imageHeight: '200'
@@ -44,10 +44,9 @@ fields:
         span: left
         required: 1
         type: fileupload
-        comment: 'Used in "Projects" and "Project" pages'
     text:
-        label: Description (Quick view popup)
-        size: huge
+        label: Content
+        size: giant
         span: full
         required: 1
         type: richeditor
