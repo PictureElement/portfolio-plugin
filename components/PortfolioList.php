@@ -13,6 +13,34 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
         ];
     }
 
+    public function defineProperties() {
+        return [
+            'width' => [
+                 'title'             => 'Width (src)',
+                 'description'       => 'Width (1x only) of candidate image source for the user agent to use.',
+                 'type'              => 'string',
+                 'default'           =>  343,
+                 'validationPattern' => '^[0-9]+$',
+                 'validationMessage' => 'The Width (src) property can contain only numeric symbols',
+                 'group'             => 'Responsive images'
+            ],
+            'widths' => [
+                 'title'             => 'Widths (srcset)',
+                 'description'       => 'Widths (1x only) of possible image sources for the user agent to use.',
+                 'type'              => 'set',
+                 'default'           => [343,288,332,245,262,184,158],
+                 'group'             => 'Responsive images'
+            ],
+            'sizes' => [
+                 'title'             => 'Sizes',
+                 'description'       => 'Value for the image element\'s sizes attribute.',
+                 'type'              => 'string',
+                 'default'           => '(min-width: 1200px) 343px, (min-width: 992px) 288px, (min-width: 768px) 332px, (min-width: 576px) 245px, calc(48.46vw - 16px)',
+                 'group'             => 'Responsive images'
+            ]
+        ];
+    }
+
     public function onRun() {
         // Javascript
         $jsAssets = [
