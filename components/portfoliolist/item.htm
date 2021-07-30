@@ -1,34 +1,41 @@
 <article class="portfolio-list__item animated zoomIn">
     <a id="portfolioListLink-{{ item.id }}" class="portfolio-list__link" href="javascript:;" role="button">
-        <img
-            class="portfolio-list__image"
-            src="{{ item.preview_image.path|resize(343,auto) }}"
-            srcset="{{ item.preview_image.path|resize(343,auto) }} 343w,
-                    {{ item.preview_image.path|resize(686,auto) }} 686w,
-                    
-                    {{ item.preview_image.path|resize(288,auto) }} 288w,
-                    {{ item.preview_image.path|resize(576,auto) }} 576w,
-                    
-                    {{ item.preview_image.path|resize(332,auto) }} 332w,
-                    {{ item.preview_image.path|resize(664,auto) }} 664w,
-                    
-                    {{ item.preview_image.path|resize(245,auto) }} 245w,
-                    {{ item.preview_image.path|resize(490,auto) }} 490w,
-                    
-                    {{ item.preview_image.path|resize(262,auto) }} 262w,
-                    {{ item.preview_image.path|resize(524,auto) }} 524w,
-                    
-                    {{ item.preview_image.path|resize(184,auto) }} 184w,
-                    {{ item.preview_image.path|resize(368,auto) }} 368w,
-                    
-                    {{ item.preview_image.path|resize(158,auto) }} 158w,
-                    {{ item.preview_image.path|resize(316,auto) }} 316w"
-            sizes="(min-width: 1200px) 343px,
-                    (min-width: 992px) 288px,
-                    (min-width: 768px) 332px,
-                    (min-width: 576px) 245px,
-                    calc(48.46vw - 16px)"
-            alt="{{ item.preview_image.description }}">
+        {% if item.preview_image.extension == 'svg' %}
+            <img 
+                class="portfolio-list__image"
+                src="{{ item.preview_image.path }}"
+                alt="{{ item.preview_image.description }}">
+        {% else %}
+            <img
+                class="portfolio-list__image"
+                src="{{ item.preview_image.path|resize(343,auto) }}"
+                srcset="{{ item.preview_image.path|resize(343,auto) }} 343w,
+                        {{ item.preview_image.path|resize(686,auto) }} 686w,
+                        
+                        {{ item.preview_image.path|resize(288,auto) }} 288w,
+                        {{ item.preview_image.path|resize(576,auto) }} 576w,
+                        
+                        {{ item.preview_image.path|resize(332,auto) }} 332w,
+                        {{ item.preview_image.path|resize(664,auto) }} 664w,
+                        
+                        {{ item.preview_image.path|resize(245,auto) }} 245w,
+                        {{ item.preview_image.path|resize(490,auto) }} 490w,
+                        
+                        {{ item.preview_image.path|resize(262,auto) }} 262w,
+                        {{ item.preview_image.path|resize(524,auto) }} 524w,
+                        
+                        {{ item.preview_image.path|resize(184,auto) }} 184w,
+                        {{ item.preview_image.path|resize(368,auto) }} 368w,
+                        
+                        {{ item.preview_image.path|resize(158,auto) }} 158w,
+                        {{ item.preview_image.path|resize(316,auto) }} 316w"
+                sizes="(min-width: 1200px) 343px,
+                        (min-width: 992px) 288px,
+                        (min-width: 768px) 332px,
+                        (min-width: 576px) 245px,
+                        calc(48.46vw - 16px)"
+                alt="{{ item.preview_image.description }}">
+        {% endif %}
         <h5 class="portfolio-list__title">{{ item.title }}</h5>
     </a>
 </article>
