@@ -8,11 +8,11 @@
         {% else %}
             <img
                 class="portfolio-list__image"
-                src="{{ item.preview_image.path|resize(__SELF__.property('width'),auto) }}"
+                src="{{ item.preview_image.path|resize(__SELF__.property('width'),auto,{ mode: 'exact' }) }}"
                 srcset="
                     {% for width in __SELF__.property('widths') %}
-                        {{ item.preview_image.path|resize(width,auto) }} {{ width }}w,
-                        {{ item.preview_image.path|resize(2 * width,auto) }} {{ 2 * width }}w,
+                        {{ item.preview_image.path|resize(width,auto,{ mode: 'exact' }) }} {{ width }}w,
+                        {{ item.preview_image.path|resize(2 * width,auto,{ mode: 'exact' }) }} {{ 2 * width }}w,
                     {% endfor %}"
                 sizes="{{ __SELF__.property('sizes') }}"
                 alt="{{ item.preview_image.description }}">
