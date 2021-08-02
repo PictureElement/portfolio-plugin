@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).on('load', function() {
 
     // Masonry options
     var masonryOptions = {
