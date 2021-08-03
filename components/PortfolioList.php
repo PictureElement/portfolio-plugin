@@ -12,31 +12,136 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
             'description' => 'Displays a filterable Masonry portfolio.'
         ];
     }
-
+    
     public function defineProperties() {
         return [
             'width' => [
-                 'title'             => 'Width (src)',
-                 'description'       => 'Width (1x only) of candidate image source for the user agent to use.',
-                 'type'              => 'string',
-                 'default'           =>  343,
-                 'validationPattern' => '^[0-9]+$',
-                 'validationMessage' => 'The Width (src) property can contain only numeric symbols',
-                 'group'             => 'Responsive images'
+                 'title'                => 'Width (src)',
+                 'description'          => 'Width (1x only) of candidate image source for the user agent to use.',
+                 'type'                 => 'string',
+                 'default'              =>  343,
+                 'validationPattern'    => '^[0-9]+$',
+                 'validationMessage'    => 'The Width (src) property can contain only numeric symbols',
+                 'group'                => 'Responsive images'
             ],
             'widths' => [
-                 'title'             => 'Widths (srcset)',
-                 'description'       => 'Widths (1x only) of possible image sources for the user agent to use.',
-                 'type'              => 'set',
-                 'default'           => [343,288,332,245,262,184,158],
-                 'group'             => 'Responsive images'
+                 'title'                => 'Widths (srcset)',
+                 'description'          => 'Widths (1x only) of possible image sources for the user agent to use.',
+                 'type'                 => 'set',
+                 'default'              => [343,288,332,245,262,184,158],
+                 'group'                => 'Responsive images'
             ],
             'sizes' => [
-                 'title'             => 'Sizes',
-                 'description'       => 'Value for the image element\'s sizes attribute.',
-                 'type'              => 'string',
-                 'default'           => '(min-width: 1200px) 343px, (min-width: 992px) 288px, (min-width: 768px) 332px, (min-width: 576px) 245px, calc(48.46vw - 16px)',
-                 'group'             => 'Responsive images'
+                 'title'                => 'Sizes',
+                 'description'          => 'Value for the image element\'s sizes attribute.',
+                 'type'                 => 'string',
+                 'default'              => '(min-width: 1200px) 343px, (min-width: 992px) 288px, (min-width: 768px) 332px, (min-width: 576px) 245px, calc(48.46vw - 16px)',
+                 'group'                => 'Responsive images'
+            ],
+            'titleFontSize' => [
+                'title'                 => 'Font size',
+                'description'           => 'Title font size',
+                'type'                  => 'string',
+                'default'               => 'clamp(1rem, 0.8182rem + 0.9091vw, 1.5rem)',
+                'group'                 => 'Title'
+            ],
+            'titleTopMargin' => [
+                'title'                 => 'Top margin',
+                'description'           => 'Title top margin',
+                'type'                  => 'string',
+                'default'               => '8px',
+                'group'                 => 'Title'
+            ],
+            'itemTopMargin' => [
+                'title'                 => 'Top margin',
+                'description'           => 'Item top margin',
+                'type'                  => 'string',
+                'default'               => '24px',
+                'group'                 => 'Item'
+            ],
+            'itemWidthXs' => [
+                'title'                 => 'Item width (xs)',
+                'description'           => 'Item width for extra small devices (e.g. 48.25%)',
+                'type'                  => 'string',
+                'default'               => 'calc((100% - 16px) / 2)',
+                'group'                 => 'Item'
+            ],
+            'itemWidthSm' => [
+                'title'                 => 'Item width (sm)',
+                'description'           => 'Item width for small devices (e.g. 48.25%)',
+                'type'                  => 'string',
+                'default'               => 'calc((100% - 16px) / 2)',
+                'group'                 => 'Item'
+            ],
+            'itemWidthMd' => [
+                'title'                 => 'Item width (md)',
+                'description'           => 'Item width for medium devices (e.g. 48.25%)',
+                'type'                  => 'string',
+                'default'               => 'calc((100% - 24px) / 2)',
+                'group'                 => 'Item'
+            ],
+            'itemWidthLg' => [
+                'title'                 => 'Item width (lg)',
+                'description'           => 'Item width for large devices (e.g. 31%)',
+                'type'                  => 'string',
+                'default'               => 'calc((100% - 48px) / 3)',
+                'group'                 => 'Item'
+            ],
+            'itemWidthXl' => [
+                'title'                 => 'Item width (xl)',
+                'description'           => 'Item width for extra large devices (e.g. 31%)',
+                'type'                  => 'string',
+                'default'               => 'calc((100% - 48px) / 3)',
+                'group'                 => 'Item'
+            ],
+            'gutterSizeXs' => [
+                'title'                 => 'Gutter size (xs)',
+                'description'           => 'Horizontal space between items for extra small devices (e.g. 3.5%)',
+                'type'                  => 'string',
+                'default'               => '16px',
+                'group'                 => 'Item'
+            ],
+            'gutterSizeSm' => [
+                'title'                 => 'Gutter size (sm)',
+                'description'           => 'Horizontal space between items for small devices (e.g. 3.5%)',
+                'type'                  => 'string',
+                'default'               => '16px',
+                'group'                 => 'Item'
+            ],
+            'gutterSizeMd' => [
+                'title'                 => 'Gutter size (md)',
+                'description'           => 'Horizontal space between items for medium devices (e.g. 3.5%)',
+                'type'                  => 'string',
+                'default'               => '24px',
+                'group'                 => 'Item'
+            ],
+            'gutterSizeLg' => [
+                'title'                 => 'Gutter size (lg)',
+                'description'           => 'Horizontal space between items for large devices (e.g. 3.5%)',
+                'type'                  => 'string',
+                'default'               => '24px',
+                'group'                 => 'Item'
+            ],
+            'gutterSizeXl' => [
+                'title'                 => 'Gutter size (xl)',
+                'description'           => 'Horizontal space between items for extra large devices (e.g. 3.5%)',
+                'type'                  => 'string',
+                'default'               => '24px',
+                'group'                 => 'Item'
+            ],
+            'modalPadding' => [
+                'title'                 => 'Padding',
+                'description'           => 'Modal padding',
+                'type'                  => 'string',
+                'default'               => 'clamp(1rem, 0.6364rem + 1.8182vw, 2rem)',
+                'group'                 => 'Modal'
+            ],
+            'spinnerColor' => [
+                'title'                 => 'Loader color',
+                'description'           => 'Loader color',
+                'type'                  => 'string',
+                'default'               => '#1976d2',
+                'group'                 => 'Misc'
             ]
         ];
     }
@@ -57,7 +162,6 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
         $cssAssets = [
             'assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
             'assets/vendor/simplebar/dist/simplebar.min.css',
-            'assets/sass/_variables.scss',
             'assets/sass/portfolio-list.scss'
         ];
         $this->addCss(CombineAssets::combine($cssAssets, plugins_path('msof/portfolio/')));
@@ -85,7 +189,6 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
         $project = Project::find($projectId);
         $this->page['project'] = $project;
         return [
-            '#portfolioListModalTitle' => $this->renderPartial('PortfolioList::modal-title'),
             '#portfolioListModalText' => $this->renderPartial('PortfolioList::modal-text')
         ];
     }

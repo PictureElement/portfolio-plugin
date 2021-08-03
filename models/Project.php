@@ -42,7 +42,7 @@ class Project extends Model
     public $belongsTo = [
         'category' => 'Msof\Portfolio\Models\Category'
     ];
-    
+     
     public $attachOne = [
         'preview_image' => [\System\Models\File::class, 'delete' => 'true']
     ];

@@ -1,61 +1,64 @@
-@import "variables";
+// Breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
 
 .portfolio-list {
     position: relative;
     &__item {
-        margin-top: clamp($itemMinTopMargin, $scaler, $itemMaxTopMargin);
-        width: $item-width;
+        margin-top: var(--property-list-item-top-margin);
+        width: var(--property-list-item-width);
         @media (min-width: $sm) {
-            width: $item-width-sm;
+            width: var(--property-list-item-width-sm);
         }
         @media (min-width: $md) {
-            width: $item-width-md;
+            width: var(--property-list-item-width-md);
         }
         @media (min-width: $lg) {
-            width: $item-width-lg;
+            width: var(--property-list-item-width-lg);
         }
         @media (min-width: $xl) {
-            width: $item-width-xl;
+            width: var(--property-list-item-width-xl);
         }
     }
     &__sizer {
-        width: $item-width;
+        width: var(--property-list-item-width);
         @media (min-width: $sm) {
-            width: $item-width-sm;
+            width: var(--property-list-item-width-sm);
         }
         @media (min-width: $md) {
-            width: $item-width-md;
+            width: var(--property-list-item-width-md);
         }
         @media (min-width: $lg) {
-            width: $item-width-lg;
+            width: var(--property-list-item-width-lg);
         }
         @media (min-width: $xl) {
-            width: $item-width-xl;
+            width: var(--property-list-item-width-xl);
         }
     }
     &__gutter-sizer {
-        width: $gutter-size;
+        width: var(--property-list-gutter-size);
         @media (min-width: $sm) {
-            width: $gutter-size-sm;
+            width: var(--property-list-gutter-size-sm);
         }
         @media (min-width: $md) {
-            width: $gutter-size-md;
+            width: var(--property-list-gutter-size-md);
         }
         @media (min-width: $lg) {
-            width: $gutter-size-lg;
+            width: var(--property-list-gutter-size-lg);
         }
         @media (min-width: $xl) {
-            width: $gutter-size-xl;
+            width: var(--property-list-gutter-size-xl);
         }
     }
     &__image {
         width: 100%;
-        height: auto;
     }
     &__title {
-        margin-top: clamp($titleMinTopMargin, $scaler, $titleMaxTopMargin);
+        margin-top: var(--property-list-title-top-margin);
         margin-bottom: 0;
-        font-size: clamp($titleMinFontSize, $scaler, $titleMaxFontSize);
+        font-size: var(--property-list-title-font-size);
     }
     &__filters {
         text-align: center;
@@ -127,7 +130,7 @@
         > div {
             max-height: calc(100vh - 200px);
             overflow: auto;
-            padding: clamp($modalMinPadding, $scaler, $modalMaxPadding);
+            padding: var(--property-list-modal-padding);
         }
         &.fancybox-content {
             max-width: 700px;
@@ -155,7 +158,7 @@
                 width: 3rem;
                 height: 3rem;
                 vertical-align: text-bottom;
-                background-color: $spinner-color;
+                background-color: var(--property-list-spinner-color);
                 border-radius: 50%;
                 opacity: 0;
                 animation: grow .75s linear infinite;

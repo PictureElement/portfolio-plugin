@@ -13,10 +13,10 @@
         </div>
         <div id="portfolioListModal" class="portfolio-list__modal">
             <div data-simplebar data-simplebar-auto-hide="false">
-                <h5 id="portfolioListModalTitle"></h5>
                 <div id="portfolioListModalText" style="overflow:hidden;"></div>
             </div>
         </div>
+        
         <div class="portfolio-list__stage-loader" id="portfolioListStageLoader">
             <div role="status">
                 <span class="screen-reader-only">Loading...</span>
@@ -34,3 +34,25 @@
         </div>
     </div>
 {% endif %}
+
+{% put styles %}
+    <style>
+        :root {
+            --property-list-title-font-size: {{ __SELF__.property('titleFontSize') }};
+            --property-list-title-top-margin: {{ __SELF__.property('titleTopMargin') }};
+            --property-list-item-top-margin: {{ __SELF__.property('itemTopMargin') }};
+            --property-list-item-width: {{ __SELF__.property('itemWidthXs') }};
+            --property-list-item-width-sm: {{ __SELF__.property('itemWidthSm') }};
+            --property-list-item-width-md: {{ __SELF__.property('itemWidthMd') }};
+            --property-list-item-width-lg: {{ __SELF__.property('itemWidthLg') }};
+            --property-list-item-width-xl: {{ __SELF__.property('itemWidthXl') }};
+            --property-list-gutter-size: {{ __SELF__.property('gutterSizeXs') }};
+            --property-list-gutter-size-sm: {{ __SELF__.property('gutterSizeSm') }};
+            --property-list-gutter-size-md: {{ __SELF__.property('gutterSizeMd') }};
+            --property-list-gutter-size-lg: {{ __SELF__.property('gutterSizeLg') }};
+            --property-list-gutter-size-xl: {{ __SELF__.property('gutterSizeXl') }};
+            --property-list-modal-padding: {{ __SELF__.property('modalPadding') }};
+            --property-list-spinner-color: {{ __SELF__.property('spinnerColor') }};
+        }
+    </style>
+{% endput %}
