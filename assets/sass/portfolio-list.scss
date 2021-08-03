@@ -54,20 +54,30 @@ $xl: 1200px;
     }
     &__image {
         width: 100%;
+        border-radius: 1rem;
     }
     &__title {
         margin-top: var(--property-list-title-top-margin);
         margin-bottom: 0;
         font-size: var(--property-list-title-font-size);
     }
-    &__filters {
+    &__wrapper {
         text-align: center;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+    &__filters {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        justify-content: flex-start;
     }
     &__category {
+        margin-right: .75rem;
         line-height: 1;
         padding: .375rem .75rem;
         border: 1px solid rgba(0,0,0,0.15);
-        border-radius: .25rem;
+        border-radius: 1rem;
         white-space: nowrap;
         vertical-align: middle;
         background-color: rgba(0,0,0,0.05);
@@ -125,6 +135,7 @@ $xl: 1200px;
         }
     }
     &__modal {
+        border-radius: 1rem;
         visibility: hidden;
         opacity: 0;
         > div {
