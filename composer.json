@@ -1,7 +1,7 @@
 {
     "name": "msof/portfolio-plugin",
     "type": "october-plugin",
-    "description": "AJAX-powered Masonry portfolio with category filters and a quick view popup.",
+    "description": "AJAX-powered Masonry portfolio with category filters and a modal dialog.",
     "homepage": "https://octobercms.com/plugin/msof-portfolio",
     "keywords": ["october", "octobercms", "portfolio"],
     "license": "GPL-3.0-only",
