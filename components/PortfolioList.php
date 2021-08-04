@@ -17,7 +17,7 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
         return [
             'width' => [
                  'title'                => 'Width (src)',
-                 'description'          => 'Width (1x only) of candidate image source for the user agent to use.',
+                 'description'          => 'Width (1x only) of candidate image source (src attribute) for the user agent to use.',
                  'type'                 => 'string',
                  'default'              =>  343,
                  'validationPattern'    => '^[0-9]+$',
@@ -26,7 +26,7 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
             ],
             'widths' => [
                  'title'                => 'Widths (srcset)',
-                 'description'          => 'Widths (1x only) of possible image sources for the user agent to use.',
+                 'description'          => 'Widths (1x only) of possible image sources (srcset attribute) for the user agent to use.',
                  'type'                 => 'set',
                  'default'              => [343,288,332,245,262,184,158],
                  'group'                => 'Responsive images'
@@ -131,20 +131,20 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
             ],
             'modalPadding' => [
                 'title'                 => 'Padding',
-                'description'           => 'Modal padding',
+                'description'           => 'Modal dialog padding',
                 'type'                  => 'string',
                 'default'               => 'clamp(1rem, 0.6364rem + 1.8182vw, 2rem)',
                 'group'                 => 'Modal'
             ],
             'spinnerColor' => [
-                'title'                 => 'Loader color',
+                'title'                 => 'Growing spinner color',
                 'type'                  => 'string',
                 'default'               => '#1976d2',
                 'group'                 => 'Misc'
             ],
             'horizontalOrder' => [
                 'title'                 => 'Horizontal order',
-                'description'           => 'Lays out items to (mostly) maintain horizontal left-to-right order',
+                'description'           => 'Choose whether to lay out items to (mostly) maintain horizontal left-to-right order',
                 'type'                  => 'checkbox',
                 'default'               => 'false',
                 'group'                 => 'Misc'
