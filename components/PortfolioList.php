@@ -155,14 +155,13 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
     public function onRun() {
         // Javascript
         $jsAssets = [
-            'assets/vendor/jquery/dist/jquery.min.js',
             'assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
             'assets/vendor/simplebar/dist/simplebar.min.js',
             'assets/vendor/masonry-layout/dist/masonry.pkgd.min.js',
             'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js',
             'assets/js/portfolio-list.js'
         ];
-        $this->addJs(CombineAssets::combine($jsAssets, plugins_path('msof/portfolio/')));
+        $this->addJs(CombineAssets::combine($jsAssets, plugins_path('msof/portfolio/')), ['defer' => true]);
         
         // CSS
         $cssAssets = [
