@@ -58,3 +58,16 @@
         }
     </style>
 {% endput %}
+
+{% put scripts %}
+    <script>
+        // Masonry options
+        var masonryOptions = {
+            columnWidth: '.portfolio-list__sizer',
+            itemSelector: '.portfolio-list__item',
+            gutter: '.portfolio-list__gutter-sizer',
+            percentPosition: true,
+            horizontalOrder: {{ __SELF__.property('horizontalOrder') }}
+        };
+    </script>
+{% endput %}

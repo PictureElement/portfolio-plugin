@@ -1,13 +1,4 @@
 $(window).on('load', function() {
-
-    // Masonry options
-    var masonryOptions = {
-        columnWidth: '.portfolio-list__sizer',
-        itemSelector: '.portfolio-list__item',
-        gutter: '.portfolio-list__gutter-sizer',
-        percentPosition: true,
-        horizontalOrder: true
-    };
     
     // Initialize Masonry
     var $grid = $('#portfolioListStage').masonry(masonryOptions);

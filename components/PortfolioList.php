@@ -60,71 +60,71 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
                 'group'                 => 'Item'
             ],
             'itemWidthXs' => [
-                'title'                 => 'Item width (xs)',
-                'description'           => 'Item width for extra small devices (e.g. 48.25%)',
+                'title'                 => 'Width (xs)',
+                'description'           => 'Item width for extra small devices',
                 'type'                  => 'string',
                 'default'               => 'calc((100% - 16px) / 2)',
                 'group'                 => 'Item'
             ],
             'itemWidthSm' => [
-                'title'                 => 'Item width (sm)',
-                'description'           => 'Item width for small devices (e.g. 48.25%)',
+                'title'                 => 'Width (sm)',
+                'description'           => 'Item width for small devices',
                 'type'                  => 'string',
                 'default'               => 'calc((100% - 16px) / 2)',
                 'group'                 => 'Item'
             ],
             'itemWidthMd' => [
-                'title'                 => 'Item width (md)',
-                'description'           => 'Item width for medium devices (e.g. 48.25%)',
+                'title'                 => 'Width (md)',
+                'description'           => 'Item width for medium devices',
                 'type'                  => 'string',
                 'default'               => 'calc((100% - 24px) / 2)',
                 'group'                 => 'Item'
             ],
             'itemWidthLg' => [
-                'title'                 => 'Item width (lg)',
-                'description'           => 'Item width for large devices (e.g. 31%)',
+                'title'                 => 'Width (lg)',
+                'description'           => 'Item width for large devices',
                 'type'                  => 'string',
                 'default'               => 'calc((100% - 48px) / 3)',
                 'group'                 => 'Item'
             ],
             'itemWidthXl' => [
-                'title'                 => 'Item width (xl)',
-                'description'           => 'Item width for extra large devices (e.g. 31%)',
+                'title'                 => 'Width (xl)',
+                'description'           => 'Item width for extra large devices',
                 'type'                  => 'string',
                 'default'               => 'calc((100% - 48px) / 3)',
                 'group'                 => 'Item'
             ],
             'gutterSizeXs' => [
                 'title'                 => 'Gutter size (xs)',
-                'description'           => 'Horizontal space between items for extra small devices (e.g. 3.5%)',
+                'description'           => 'Horizontal space between items for extra small devices',
                 'type'                  => 'string',
                 'default'               => '16px',
                 'group'                 => 'Item'
             ],
             'gutterSizeSm' => [
                 'title'                 => 'Gutter size (sm)',
-                'description'           => 'Horizontal space between items for small devices (e.g. 3.5%)',
+                'description'           => 'Horizontal space between items for small devices',
                 'type'                  => 'string',
                 'default'               => '16px',
                 'group'                 => 'Item'
             ],
             'gutterSizeMd' => [
                 'title'                 => 'Gutter size (md)',
-                'description'           => 'Horizontal space between items for medium devices (e.g. 3.5%)',
+                'description'           => 'Horizontal space between items for medium devices',
                 'type'                  => 'string',
                 'default'               => '24px',
                 'group'                 => 'Item'
             ],
             'gutterSizeLg' => [
                 'title'                 => 'Gutter size (lg)',
-                'description'           => 'Horizontal space between items for large devices (e.g. 3.5%)',
+                'description'           => 'Horizontal space between items for large devices',
                 'type'                  => 'string',
                 'default'               => '24px',
                 'group'                 => 'Item'
             ],
             'gutterSizeXl' => [
                 'title'                 => 'Gutter size (xl)',
-                'description'           => 'Horizontal space between items for extra large devices (e.g. 3.5%)',
+                'description'           => 'Horizontal space between items for extra large devices',
                 'type'                  => 'string',
                 'default'               => '24px',
                 'group'                 => 'Item'
@@ -138,9 +138,15 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
             ],
             'spinnerColor' => [
                 'title'                 => 'Loader color',
-                'description'           => 'Loader color',
                 'type'                  => 'string',
                 'default'               => '#1976d2',
+                'group'                 => 'Misc'
+            ],
+            'horizontalOrder' => [
+                'title'                 => 'Horizontal order',
+                'description'           => 'Lays out items to (mostly) maintain horizontal left-to-right order',
+                'type'                  => 'checkbox',
+                'default'               => 'false',
                 'group'                 => 'Misc'
             ]
         ];
