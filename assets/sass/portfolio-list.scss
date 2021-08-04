@@ -1,54 +1,54 @@
 // Breakpoints
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
+$property-list-breakpoint-sm: 576px;
+$property-list-breakpoint-md: 768px;
+$property-list-breakpoint-lg: 992px;
+$property-list-breakpoint-xl: 1200px;
 
 .portfolio-list {
     position: relative;
     &__item {
         margin-top: var(--property-list-item-top-margin);
         width: var(--property-list-item-width);
-        @media (min-width: $sm) {
+        @media (min-width: $property-list-breakpoint-sm) {
             width: var(--property-list-item-width-sm);
         }
-        @media (min-width: $md) {
+        @media (min-width: $property-list-breakpoint-md) {
             width: var(--property-list-item-width-md);
         }
-        @media (min-width: $lg) {
+        @media (min-width: $property-list-breakpoint-lg) {
             width: var(--property-list-item-width-lg);
         }
-        @media (min-width: $xl) {
+        @media (min-width: $property-list-breakpoint-xl) {
             width: var(--property-list-item-width-xl);
         }
     }
     &__sizer {
         width: var(--property-list-item-width);
-        @media (min-width: $sm) {
+        @media (min-width: $property-list-breakpoint-sm) {
             width: var(--property-list-item-width-sm);
         }
-        @media (min-width: $md) {
+        @media (min-width: $property-list-breakpoint-md) {
             width: var(--property-list-item-width-md);
         }
-        @media (min-width: $lg) {
+        @media (min-width: $property-list-breakpoint-lg) {
             width: var(--property-list-item-width-lg);
         }
-        @media (min-width: $xl) {
+        @media (min-width: $property-list-breakpoint-xl) {
             width: var(--property-list-item-width-xl);
         }
     }
     &__gutter-sizer {
         width: var(--property-list-gutter-size);
-        @media (min-width: $sm) {
+        @media (min-width: $property-list-breakpoint-sm) {
             width: var(--property-list-gutter-size-sm);
         }
-        @media (min-width: $md) {
+        @media (min-width: $property-list-breakpoint-md) {
             width: var(--property-list-gutter-size-md);
         }
-        @media (min-width: $lg) {
+        @media (min-width: $property-list-breakpoint-lg) {
             width: var(--property-list-gutter-size-lg);
         }
-        @media (min-width: $xl) {
+        @media (min-width: $property-list-breakpoint-xl) {
             width: var(--property-list-gutter-size-xl);
         }
     }
