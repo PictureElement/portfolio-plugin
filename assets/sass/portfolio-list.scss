@@ -54,7 +54,7 @@ $property-list-breakpoint-xl: 1200px;
     }
     &__image {
         width: 100%;
-        border-radius: 1rem;
+        border-radius: var(--property-list-image-border-radius);
     }
     &__title {
         margin-top: var(--property-list-title-top-margin);
@@ -127,7 +127,7 @@ $property-list-breakpoint-xl: 1200px;
             z-index: 99999;
             visibility: hidden;
             opacity: 0;
-            background-color: rgba(255,255,255,0.9);
+            background-color: var(--property-list-stage-loader-bg-color);
             &_show {
                 visibility: visible;
                 opacity: 1;
@@ -135,9 +135,11 @@ $property-list-breakpoint-xl: 1200px;
         }
     }
     &__modal {
-        border-radius: 1rem;
+        border-radius: var(--property-list-modal-border-radius);
         visibility: hidden;
         opacity: 0;
+        display: none;
+        will-change: visibility, opacity;
         > div {
             max-height: calc(100vh - 200px);
             overflow: auto;

@@ -133,13 +133,31 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
                 'title'                 => 'Padding',
                 'description'           => 'Modal dialog padding',
                 'type'                  => 'string',
-                'default'               => 'clamp(1rem, 0.6364rem + 1.8182vw, 2rem)',
+                'default'               => 'clamp(2rem, 1.2727rem + 3.6364vw, 4rem)',
+                'group'                 => 'Modal'
+            ],
+            'modalBorderRadius' => [
+                'title'                 => 'Modal border radius',
+                'type'                  => 'string',
+                'default'               => '32px',
                 'group'                 => 'Modal'
             ],
             'spinnerColor' => [
                 'title'                 => 'Growing spinner color',
                 'type'                  => 'string',
                 'default'               => '#1976d2',
+                'group'                 => 'Misc'
+            ],
+            'stageLoaderBgColor' => [
+                'title'                 => 'Stage loader background color',
+                'type'                  => 'string',
+                'default'               => 'rgba(255,255,255,0.9)',
+                'group'                 => 'Misc'
+            ],
+            'imageBorderRadius' => [
+                'title'                 => 'Image border radius',
+                'type'                  => 'string',
+                'default'               => '16px',
                 'group'                 => 'Misc'
             ],
             'horizontalOrder' => [
@@ -161,7 +179,7 @@ class PortfolioList extends \Cms\Classes\ComponentBase {
             'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js',
             'assets/js/portfolio-list.js'
         ];
-        $this->addJs(CombineAssets::combine($jsAssets, plugins_path('msof/portfolio/')), ['defer' => true]);
+        $this->addJs(CombineAssets::combine($jsAssets, plugins_path('msof/portfolio/')));
         
         // CSS
         $cssAssets = [
